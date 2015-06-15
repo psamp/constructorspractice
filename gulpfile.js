@@ -38,7 +38,7 @@ gulp.task('watch', function() {
 gulp.task('hint:js', function() {
   return gulp.src(['./js/*.js', '!./js/templates.js'])
     .pipe(notifyError())
-    .pipe(jshint())
+    .pipe(jshint('default'))
     .pipe(jshint.reporter('fail'));
 });
 
